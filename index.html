@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Mozilla Quiz</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/headers.css" rel="stylesheet" type="text/css">
+	<link href="css/drawer.css" rel="stylesheet" type="text/css">
+	<link href="css/module.css" rel="stylesheet" type="text/css">
+	<link href="css/transitions.css" rel="stylesheet" type="text/css">
+	<link href="css/util.css" rel="stylesheet" type="text/css">
+	<link href="css/fonts.css" rel="stylesheet" type="text/css">
+	<link href="css/lists.css" rel="stylesheet" type="text/css">
+	<link href="css/layout.css" rel="stylesheet" type="text/css">
+	<link href="css/switches.css" rel="stylesheet" type="text/css">
+	<link href="css/buttons.css" rel="stylesheet" type="text/css">
+	<link href="css/input_areas.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js">
+	</script>
+    </head>
+    <body>
+<section id="index" data-position="current">
+    <section data-type="sidebar">
+    <header>
+      <h1>Elérhető kvízek <em>(3)</em></h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#" class="btn-beginner-quiz">Kezdő kvíz</a></li>
+        <li><a href="#" class="btn-developer-quiz">Fejlesztői kvíz</a></li>
+        <li><a href="#" class="btn-result">Eredmények</a></li>
+	<li><a href="#" class="btn-questions">Kérdőív</a></li>
+      </ul>
+      <h2>Beállítások</h2>
+      <ul>
+        <li><a href="#" class="btn-server-address">Szerver cím</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="drawer" role="region">
+    <header>
+      <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
+      <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+      <h1>Mozilla Kvíz</h1>
+    </header>
+    <article class="scrollable">
+        <div data-type="list">
+          <ul>
+            <li>
+              <a id="btn-about-firefox-os" href="#">
+                <p>A Firefox OS-ről</p>
+              </a>
+            </li>
+	    <li>
+              <a id="btn-about-firefox-os" href="#">
+                <p></p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </article>
+  </section>
+    
+</section>
+<section role="region" id="questions" data-position="right">
+    <header>
+      <a id="btn-questions-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Kérdőív</h1>
+    </header>
+    <article class="content scrollable">
+	<form id="questions-form">
+	    <header><h2>Típus</h2></header>
+	    <select id="erdeklodo" name="type" required="">
+		<option value="beginner" >Érdeklődő</option>
+		<option value="wantdev" >Fejlesztenék</option>
+		<option value="dev" >Fejlesztek</option>
+	  </select>
+	  <header><h2>Teljes név</h2></header>
+            <p>
+              <input type="text" name="name" placeholder="Teljes név" required>
+            </p>
+	<header><h2>E-mail</h2></header>
+            <p>
+              <input type="email" name="email" placeholder="E-mail" required>
+            </p>
+	    <div id="appname" class="not-visible">
+		
+		<header><h2>App név</h2></header>
+            <p>
+              <input type="text" name="app_name" placeholder="App név">
+            </p>
+	    </div>
+	   
+	    <button  type="submit" class="bb-button recommend">Kész</button><p>
+		
+	</form>
+	
+	 
+    </article>
+  </section>
+<section role="region" id="server-address" data-position="right">
+    <header>
+      <a id="btn-server-address-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Szerver cím</h1>
+    </header>
+    <article class="content scrollable">
+	<form id="settings">
+	    <header><h2>IP cím</h2></header>
+            <p>
+		<input type="text" name="ip" value="" placeholder="IP cím" required>
+            </p>
+	  <header><h2>Kliens név</h2></header>
+            <p>
+              <input type="text" name="client_name" placeholder="Kliens név" required>
+            </p>
+	<header><h2>Jelszó</h2></header>
+            <p>
+              <input type="password" name="password" placeholder="" required>
+            </p>
+	    <p>
+		<button  type="submit" class="bb-button recommend">Kész</button><p>
+	</form>
+	 
+    </article>
+  </section>
+	
+	
+  <section class="skin vbox fit" role="region" id="about-firefox-os" data-position="right">
+    <header>
+      <a id="btn-buttons-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Firefox OS-ről</h1>
+    </header>
+  <section class="gaia-list fit scroll sticky scrollable">
+    <article>
+	
+      <header>Mi a Firefox OS?</header>
+      <ul>
+        <li><p> Az ipar legnagyobb nevű cégei által támogatott Firefox OS egy új operációs rendszer okostelefonokra, amit a Mozilla fejlesztett.
+          Teljes egészében HTML5-re és más nyílt szabványokra építve, a Firefox OS mentes a zárt platformok szabályaitól és kötöttségeitől.</p></li>
+      </ul>
+    </article>
+    <article>
+	<header>Miben különbözik a Firefox OS?</header>
+      <ul>
+        <li><p> Firefox OS az egyetlen operációs rendszer, amely adaptív app kereséssel rendelkezik.
+            Míg más mai telefonok kötöttek, bekapcsoláskor mindig ugyanazokat az alkalmazásokat kínálják fel, a Firefox OS mindig a felhasználó igényeihez alkalmazkodva változik, ahhoz képest, hogy az adott élethelyzetben mire van szükség.</p></li>
+        <li><p> Alkalmazkodik, így minden pillanat annak teljességében élhető meg.</p></li>
+	<li><p>A Firefox OS-t a Mozilla készítette, amely egy világméretű nonprofit szervezet, és amely fontosabbnak tartja az elveket a haszonnál.
+            Úgy hisszük, hogy az internet egy közösségi érték, amelyre vigyázni kell, nem egy tulajdon, amivel kereskedni lehet.
+            Egy nemzetközi közösségben dolgozunk, hogy olyan nyílt forráskódú termékeket hozzunk létre, mint a Mozilla Firefox, amely hasznos az emberek számára és jobbá teszi az internetet.
+            Az eredmény: szenvedélyes emberek által létrehozott nagyszerű termékek és jobb alternatívák mindenki számára.<br><br><br><br></p></li>
+      </ul>
+    </article>
+  </section>
+  </section>
+<section role="region" id="result" data-position="right">
+<header class="fixed">
+      <a id="btn-result-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Eredmények</h1>
+    </header>
+    <article class="content scrollable header">
+	<form id="result-form">
+	    <select name="type" required="">
+		<option value="beginner">Kezdő kvíz</option>
+		<option value="dev">Fejlesztői kvíz</option>
+	  </select>
+	    <select id="datepicker_t" name="datech" required="">
+		<option value="all">Összes</option>
+	    <option value="special">Konkrét időpont</option>
+	  </select>
+	  <input id="datepicker" class="not-visible" name="date" type="date" />
+	  <button type="submit" class="bb-button recommend">Keresés</button>
+	</form>
+	<form id="smallsearch-form">
+	    <input type="text" name="name" placeholder="A te neved" required="">
+	    <button type="submit" class="bb-button recommend">Keresés az eredmények közt</button>
+	</form>
+	<div id="search-result">
+	   
+	</div>
+    </article>
+</section>
+<section role="region" id="beginner-quiz" data-position="right">
+<header class="fixed">
+      <a id="btn-beginner-quiz-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Kezdő kvíz</h1>
+    </header>
+    <article class="content scrollable header">
+	<form class="quiz-form" method="post" action="">
+	    <input type="hidden" name="type" value="beginner">
+	    <input type="hidden" name="client_name" value="">
+	    <header><h2>Megbízható-e egy https kapcsolat?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_1[]" value="1">
+		    <span></span>
+		  </label>mindig
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_1[]" value="2">
+		    <span></span>
+		  </label>sosem
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_1[]" value="3">
+		    <span></span>
+		</label>ha a tanúsítvány megbízható szervezet írta alá<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_1[]" value="4">
+		    <span></span>
+		  </label>ha a tanúsítvány nem járt le
+	    </h2>
+	    <header><h2>Ki férhet hozzá a felhőben (Google, Facebook, ...) tárolt adatokhoz?</h2></header>
+	    <h2>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_2[]" value="1">
+		    <span></span>
+		  </label>én
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_2[]" value="2">
+		    <span></span>
+		  </label>akinek engedélyt adtam
+		<br>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_2[]" value="3">
+		    <span></span>
+		</label>a felhő szolgáltató<br>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_2[]" value="4">
+		    <span></span>
+		  </label>bárki akinek a felhő szolgáltató az adatokat kiadja
+	    </h2>
+	    
+	    <header><h2>Mi a jelvénye a Linuxnak?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_3" value="1" required="">
+		    <span></span>
+		  </label>egér
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_3" value="2">
+		    <span></span>
+		  </label>pingvin
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_3" value="3">
+		    <span></span>
+		</label>gepárd
+	    </h2>
+	    <header><h2>Milyen tulajdonsággal rendelkeznek a szabad szoftverek?</h2></header>
+	    <h2>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_4[]" value="1">
+		    <span></span>
+		  </label>Tetszőleges célra történő szabad felhasználás.
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_4[]" value="2">
+		    <span></span>
+		  </label>A szabad tanulmányozhatóság és igény szerinti módosíthatóság, aminek előfeltétele a forráskódhoz való hozzáférhetőség.
+		<br>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_4[]" value="3">
+		    <span></span>
+		</label>A másolatok szabad terjeszthetősége, segítve ezzel ismerőseinket.<br>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_4[]" value="4">
+		    <span></span>
+		  </label>A szabad továbbfejleszthetőség, és az eredmény szabad közzététele a közösség javára.
+	    </h2>
+	    <header><h2>Mióta ismeri az európai ember a kakaót?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_5" value="1" required="">
+		    <span></span>
+		  </label> körülbelül 500 éve
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_5" value="2">
+		    <span></span>
+		  </label>körülbelül 200 éve
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_5" value="3">
+		    <span></span>
+		</label>körülbelül 50 éve
+	    </h2>
+	    
+	    <header><h2>Az Ubuntu, a Fedora, a Linux Mint operációs rendszer:
+</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_6" value="1" required="">
+		    <span></span>
+		  </label>  ingyenesen letölthető és használható, a frissítések is ingyenesek.
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_6" value="2">
+		    <span></span>
+		  </label>fizetés ellenében letölthető és használható, a frissítések viszont ingyenesek
+
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_6" value="3">
+		    <span></span>
+		</label> fizetés ellenében letölthető és használható, és a frissítések is
+	    </h2>
+	    
+	    <header><h2>Körülbelül mennyit keres naponta egy kávészüretelő?
+</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_7" value="1" required="">
+		    <span></span>
+		  </label>kb. 2 euró
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_7" value="2">
+		    <span></span>
+		  </label>kb. 4 euró
+
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_7" value="3">
+		    <span></span>
+		</label> kb. 11 euró
+
+	    </h2>
+	     <header><h2>Mi a helyes eljárás, ha a Mozilla, a LibreOffice, az Ubuntu vagy más nyílt forráskódú termékben hibát találok?
+</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_8" value="1" required="">
+		    <span></span>
+		  </label>Megpróbálok kapcsolatba lépni a maffiával, ők úgyis mindent el tudnak intézni
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_8" value="2">
+		    <span></span>
+		  </label>A http://bug.openscope.org/ webhelyen megpróbálom megkeresni a hibát. Ha nem találom meg, akkor részletesen leírom, hogyan sikerült előidézni a problémát és – szükség esetén – megadom a hibát okozó dokumentumot vagy weboldalt
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_8" value="3">
+		    <span></span>
+		</label> Szörnyű haragomban DVD-lemez áldozatot mutatok be teliholdkor és „Mozilla könyve” még nem publikus fejezeteiből idézeteket olvasok fel
+	    </h2>
+	    <header><h2>Körülbelül hány munkaórára van szükség egy kg. nyers kávé előállításához?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_9" value="1" required="">
+		    <span></span>
+		  </label>fél órára
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_9" value="2">
+		    <span></span>
+		  </label>1 órára
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_9" value="3">
+		    <span></span>
+		</label> 3 órára
+	    </h2>
+	    
+	    <header><h2>Ki férhet hozzá a titkosított csatornán (smtps/starttls) küldött levelekhez?</h2></header>
+	    <h2>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_10[]" value="1">
+		    <span></span>
+		  </label>a címzett
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_10[]" value="2">
+		    <span></span>
+		  </label> a címzett levelező szolgáltatójának rendszergazdája
+		<br>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_10[]" value="3">
+		    <span></span>
+		</label> az összes – a továbbításban részt vevő – levelező szervez rendszergazdája<br>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_10[]" value="4">
+		    <span></span>
+		</label>bárki
+
+	    </h2>
+	    
+	    <header><h2>Mi az a rizsbank?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_11" value="1" required>
+		    <span></span>
+		  </label>egy a helyi fajták eltartására működő raktár
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_11" value="2">
+		    <span></span>
+		  </label>egy bank, ahol rizzsel fizetnek
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_11" value="3">
+		    <span></span>
+		</label> egy rizsraktár, hogy a rizst akkor lehessen értékesíteni, amikor kedvező az ára
+	    </h2>
+	    
+	    
+	    <header><h2>Kik vehetnek részt a szabad szoftverek fejlesztésében?</h2></header>
+	    <h2>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_12[]" value="1">
+		    <span></span>
+		  </label>Programozók, hiszen a szoftverek fejlesztéséhez kell a programozói tudás.
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_12[]" value="2">
+		    <span></span>
+		  </label>Bárki más is, aki kedvet érez hozzá, hogy valamilyen módon segítse a közösséget (fordítás, programtesztelés, felhasználók segítése, népszerűsítés).
+
+		<br>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_12[]" value="3">
+		    <span></span>
+		</label>Senki<br>
+
+	    </h2>
+	    
+	    
+	     <header><h2>Mi a méltányos kereskedelem- fair trade?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_13" value="1" required>
+		    <span></span>
+		  </label> Az a kereskedelmi kapcsolat, amely párbeszéden, tiszteleten alapul, átlátható és nagyobb egyenlőségre törekszik.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_13" value="2">
+		    <span></span>
+		  </label>Max Havelaar utópisztikus regénye a XXII. század gyarmati rendszeréről.
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_13" value="3">
+		    <span></span>
+		</label> Társasjáték tőzsdecápáknak.
+	    </h2>
+	     
+	      <header><h2>Milyen platformra vagy platformokra érhető el a Firefox mobil verziója?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_14" value="1" required>
+		    <span></span>
+		  </label> Symbian, iOS, Bada
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_14" value="2">
+		    <span></span>
+		  </label>Android, Firefox OS
+
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_14" value="3">
+		    <span></span>
+		</label> BlackBerry, webOS
+	    </h2>
+	      
+	      <header><h2>A dokumentumszabadság fontos, mert …</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_15" value="1" required>
+		    <span></span>
+		  </label>Mindenki szabadon hozhat létre, küldhet, menthet el elektronikus dokumentumokat anélkül, hogy egy adott cég saját tulajdonú szoftverjét kellene használnia.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_15" value="2">
+		    <span></span>
+		  </label>Egy szabad világban a dokumentumokat is megilleti a szabadság.
+
+
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_15" value="3">
+		    <span></span>
+		</label>  Így több vicces prezentációt kaphatok barátaimtól, munkatársaimtól.
+	    </h2>
+	      
+	      <header><h2>Hogyan lehet titkosítani egy elküldendő e-mailt?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_16" value="1" required>
+		    <span></span>
+		  </label>Felesleges titkosítani a leveleket csak a küldő és csak a fogadó láthatja.
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_16" value="2">
+		    <span></span>
+		  </label>GnuPG segítségével (akár a Thunderbird levelező és az Enigmail kiterjesztéssel) egyszerűen titkosíthatunk.
+
+
+		<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_16" value="3">
+		    <span></span>
+		</label>  A magánhangzókat soha ne írjuk bele a levélbe.
+
+	    </h2>
+	      
+	      <header><h2>Hány hetente jelenik meg új verzió a Firefoxból? </h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_17" value="1" required>
+		    <span></span>
+		  </label>3
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_17" value="2">
+		    <span></span>
+		  </label>6<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_17" value="3">
+		    <span></span>
+		</label>42
+	    </h2>
+	      
+	       <header><h2>Válassz erős jelszót! Melyeket választanál ezekből?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_18" value="1" required>
+		    <span></span>
+		  </label>Peter-13
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_18" value="2">
+		    <span></span>
+		  </label>123456
+<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_18" value="3">
+		    <span></span>
+		</label>test123<br>
+<label class="pack-radio">
+		    <input type="radio" name="question_18" value="4">
+		    <span></span>
+		  </label>8475_VzEs@Jt
+	    </h2>
+	       
+	       <header><h2>Milyen magasra nő egy kakaófa?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_19" value="1" required>
+		    <span></span>
+		  </label>2 méter
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_19" value="2">
+		    <span></span>
+		  </label>5 méter
+<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_19" value="3">
+		    <span></span>
+		</label>10 méter
+	    </h2>
+	       
+	       <header><h2>Mit jelent az, hogy papírkávé?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_20" value="1" required>
+		    <span></span>
+		  </label>Egy olcsóbb módszer a kávéfőzésre, mely során a kávét papír fecnivel vegyítik
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_20" value="2">
+		    <span></span>
+		  </label>A koffeinmentes kávét hívják így is
+
+<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_20" value="3">
+		    <span></span>
+		</label>Az a kávé, amit spekulánsok vesznek meg és adnak el újra (átlagosan 11 x), hogy az árakat befolyásolják (növeljék).
+
+	    </h2>
+	       
+	         <header><h2>Hogy hívják a Mozilla hazánkban is megjelent mobiltelefon operációs rendszerét? </h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_21" value="1" required>
+		    <span></span>
+		  </label> Firefox for Android
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_21" value="2">
+		    <span></span>
+		  </label>Firefox OS
+
+<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_21" value="3">
+		    <span></span>
+		</label>Phonezilla
+
+	    </h2>
+		 
+		  <header><h2>A rizsföldek hány százaléka található Ázsiában? </h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_22" value="1" required>
+		    <span></span>
+		  </label> 50 %
+
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_22" value="2">
+		    <span></span>
+		  </label>70 %
+
+<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_22" value="3">
+		    <span></span>
+		</label> 90%
+
+	    </h2>
+		  
+		   <header><h2>Mi az a Live CD?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_23" value="1" required>
+		    <span></span>
+		  </label> Az Ubuntu Linux telepítő CD-je, ahol telepítés előtt ki lehet próbálni a rendszert. Pendrive-ra írva akár napi használatra is alkalmas.
+
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_23" value="2">
+		    <span></span>
+		  </label> A Hegyalja Fesztivál válogatás CD-je az idén felvett koncertekről.
+
+
+<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_23" value="3">
+		    <span></span>
+		</label>CD-meghajtó javító CD, amely kitisztítja és új életet lehel a meghajtóba.
+
+
+	    </h2>
+		   
+		      <header><h2>Mennyi nyers kávét szüretelnek a becslések szerint évente?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_24" value="1" required>
+		    <span></span>
+		  </label>1 milliárd kg
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_24" value="2">
+		    <span></span>
+		  </label>3 milliárd kg<br>
+		<label class="pack-radio">
+		    <input type="radio" name="question_24" value="3">
+		    <span></span>
+		</label>6 milliárd kg
+	    </h2>
+		      
+		         <header><h2>Melyik elnevezés szerepel Linux terjesztés kódneveként?</h2></header>
+	    <h2>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_25[]" value="1" >
+		    <span></span>
+		  </label> Saucy Salamander <br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_25[]" value="2">
+		    <span></span>
+		  </label> Petra<br>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_25[]" value="3">
+		    <span></span>
+		</label>Schrödinger's cat<br>
+<label class="pack-checkbox">
+		    <input type="checkbox" name="question_25[]" value="4">
+		    <span></span>
+		</label>Arcturus
+
+
+	    </h2>
+			 
+			 <header><h2>Név</h2></header>
+            <p>
+		<input type="text" placeholder="Név" name="name" required>
+              <button type="reset">Clear</button>
+            </p>
+	<header><h2>E-mail</h2></header>
+            <p>
+		<input type="email" placeholder="E-mail" name="email" required>
+              <button type="reset">Clear</button>
+            </p>
+	    <header><h2>Szeretnék kérni e-mailben több információt, és hasznos linkeket arról, hogy miképpen vehetek részt a szabad szoftverek fejlesztésében, tesztelésében, dokumentálásában, népszerűsítésében.</h2></header>
+            <label class="pack-checkbox">
+		<input type="checkbox" checked name="survey_newsletter">
+  <span></span>
+</label>
+	    <header><h2>Honnan hallottál a szabad szoftverekről:</h2></header>
+            <p>
+		<textarea placeholder="" name="survey[opensource]"></textarea>
+            </p>
+	    
+	     <header><h2>Mióta használsz Firefoxot</h2></header>
+            <p>
+              <input type="text" placeholder="" name="survey[firefox_start]" >
+              <button type="reset">Clear</button>
+            </p>
+	    <header><h2>Mióta használsz Thunderbirdöt:</h2></header>
+            <p>
+              <input type="text" name="survey[thunderbird_start]" placeholder="" >
+              <button type="reset">Clear</button>
+            </p>
+	    
+	    <header><h2>Mióta használsz LibreOffice-ot:</h2></header>
+            <p>
+              <input type="text" name="survey[lo_start]" placeholder="" >
+              <button type="reset">Clear</button>
+            </p>
+	    
+	    <header><h2>Mi a véleményed a Firefoxról és a Firefox androidos verziójáról?</h2></header>
+	    <p>
+              <textarea name="survey[opinion_fx]" placeholder=""></textarea>
+            </p>
+	    <header><h2>Melyik Mozilla projektben vennél részt szívesen?</h2></header>
+	    <p>
+              <textarea placeholder="" name="survey[moz_projekt]"></textarea>
+            </p>
+	    <header><h2>Milyen Mozilla termékeket és szolgáltatásokat használsz?</h2></header>
+	    <p>
+              <textarea placeholder="" name="survey[moz_product]"></textarea>
+            </p>
+	    <header><h2>Honnan informálódsz a Mozillával kapcsolatos hírekről?</h2></header>
+	    <p>
+              <textarea placeholder="" name="survey[info]"></textarea>
+            </p>
+	    <p>
+		<button  type="submit" class="bb-button recommend">Kész</button><p>
+	</form>
+    </article>
+</section>
+
+<section role="region" id="developer-quiz" data-position="right">
+    <header class="fixed">
+      <a id="btn-developer-quiz-back" href="#"><span class="icon icon-back">back</span></a>
+      <h1>Fejlesztői kvíz</h1>
+    </header>
+    <article class="content scrollable header">
+	<form class="quiz-form" method="post" action="">
+	    <input type="hidden" name="type" value="dev">
+	    <input type="hidden" name="client_name" value="">
+	    <header><h2>Mi a minimális rendszerkövetelmény a Firefox OS számára?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_1" required value="1">
+		    <span></span>
+		</label>800 MHz, 4 GB RAM
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_1" value="2">
+		    <span></span>
+		</label>2x1200 MHz, 640kb RAM<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_1" value="3">
+		    <span></span>
+		</label>800 MHz, 256 MB RAM<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_1" value="4">
+		    <span></span>
+		</label>1000 MHz, 512 MB RAM
+	    </h2>
+	    
+	    <header><h2>Hány féle jogosultsági kategóriára lehet osztani egy Firefox OS web alkalmazást?</h2></header>
+	    <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_2" required value="1">
+		    <span></span>
+		</label>
+		3 féle: Hosted, Privileged, Certified
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_2" value="2">
+		    <span></span>
+		</label>
+		2 féle: Hosted, packaged
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_2" value="3">
+		    <span></span>
+		</label>
+		3 féle: Hosted, Privileged, Authorized
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_2" value="4">
+		    <span></span>
+		</label>
+		4 féle: Hosted, Privileged, Certified, Authorized
+	    </h2>
+	     <header><h2>Hogy hívják a Firefox OS alkalmazás leíró fájlt?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_3" required value="1">
+		    <span></span>
+		</label>
+		manifest.appcache
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_3" value="2">
+		    <span></span>
+		</label>
+		manifest.webapp
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_3" value="3">
+		    <span></span>
+		</label>
+		webapp.manifest
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_3" value="4">
+		    <span></span>
+		</label>
+		myapp.manifest
+	    </h2>
+	     <header><h2>Milyen technológiával lehet alkalmazást fejleszeni Firefox OS-re?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_4" value="1" required="">
+		    <span></span>
+		</label>
+		HTML, CSS és Java nyelvek használatával.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_4" value="2">
+		    <span></span>
+		</label>
+		HTML5 technológiával, HTML, CSS és JavaScript nyelvek használatával.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_4" value="3">
+		    <span></span>
+		</label>
+		Objective-C nyelven.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_4"  value="4">
+		    <span></span>
+		</label>
+		PHP szkriptekkel lehet HTML oldalakat generálni és ez lesz az alkalmazás.
+	    </h2>
+	     
+	      <header><h2>Hogy hívják azokat az API-kat amiket a Mozilla nyújtott be szabványosításra, hogy a web mobilon is nyílt és szabad maradhasson?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_5"  value="1" required="">
+		    <span></span>
+		</label>
+		Firefox OS API
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_5"  value="2">
+		    <span></span>
+		</label>
+		 Mobile WebAPI
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_5"  value="3">
+		    <span></span>
+		</label>
+		Open WebAPI
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_5"  value="4">
+		    <span></span>
+		</label>
+		 Mozilla Mobile API
+	    </h2>
+	      
+	      <header><h2>Hányas verziónál tart jelenleg a hivatalos Firefox OS?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_6"  value="1" required="">
+		    <span></span>
+		</label>
+		2.4.5b
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_6"  value="2">
+		    <span></span>
+		</label>
+		 1.1.0.0
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_6" value="3">
+		    <span></span>
+		</label>
+		1.2.3.4.5.6.7.8.9
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_6" value="4">
+		    <span></span>
+		</label>
+		 1.4.0
+	    </h2>
+	      
+	       <header><h2>Hogyan érhető el a hardware egy Web App számára?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_7" value="1" required="">
+		    <span></span>
+		</label>
+		A hardware.js beimportálásával korlátlan hozzáférést kapunk a telefonhoz.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_7" value="2" >
+		    <span></span>
+		</label>
+		Csakis és kizárólag a B2G rendszer process-en keresztül, a rendelkezésünkre álló Web API-kon keresztül.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_7" value="3" >
+		    <span></span>
+		</label>
+		A szolgáltatók tudják szabályozni, hogy egy alkalmazás mennyi mindent érjen a telefonon.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_7" value="4">
+		    <span></span>
+		</label>
+		 A manifest.webapp leíró fájl segítségével és a felhasználó engedélyével tetszőleges hardware elemhez hozzáférhetünk.
+	    </h2>
+	       
+	         <header><h2>Milyen formátumú a Firefox OS telepítés leíró manifest.webapp fájl?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_8" value="1"  required="">
+		    <span></span>
+		</label>
+		bináris
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_8"  value="2">
+		    <span></span>
+		</label>
+		szöveg alapú, JSON formátumú
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_8"  value="3" >
+		    <span></span>
+		</label>
+		szöveg alapú, XML formátumú
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_8" value="4" >
+		    <span></span>
+		</label>
+		 szöveg alapú, YAML formátumú
+	    </h2>
+		    <header><h2>Mi a funkciója a Mozilla közreműködéssel fejlesztett Servonak?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_9" value="1" required="">
+		    <span></span>
+		</label>
+		Robotvezérlés megvalósítása WebAPI-n keresztül.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_9"  value="2">
+		    <span></span>
+		</label>
+		Egy intelligens donorkeresési rendszer a szervátültetések megkönnyítésére.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_9" value="3" >
+		    <span></span>
+		</label>
+		Kísérleti projekt egy új böngészőmotor létrehozására, amelyet Rust nyelven fejlesztenek, erősen párhuzamos végrehajtást támogat, a hardveres gyorsítás használata mellett, minimális energiafelhasználásra törekedve.
+	    </h2>
+		    <header><h2>Miket végezhetünk el a Firefox OS szimulátorral</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_10"  value="1" required="">
+		    <span></span>
+		</label>
+		Alkalmazás fejlesztés és tesztelés.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_10" value="2" >
+		    <span></span>
+		</label>
+		 Alkalmazás kipróbálása helyi vagy távoli környezetről, illetve az alkalmazás telepítése egy telefonra.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_10" value="3">
+		    <span></span>
+		</label>
+		A szimulátorban csak az OS-t nézhetjük meg mint egy demó, semmi másra nem jó.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_10" value="4">
+		    <span></span>
+		</label>
+		 Az nem szimulátor hanem emulátor.
+	    </h2>
+		    <header><h2>Hány rétegből áll a Firefox OS rendszer szinten?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_11" value="1" required="" >
+		    <span></span>
+		</label>
+		4
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_11" value="2">
+		    <span></span>
+		</label>
+		2
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_11"  value="3">
+		    <span></span>
+		</label>
+		3
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_11"  value="4">
+		    <span></span>
+		</label>
+		7
+	    </h2>
+		    <header><h2>Mennyibe kerül egy fejlesztői licenc, amellyel új alkalmazásokat lehet létrehozni?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_12" value="1" required="">
+		    <span></span>
+		</label>
+		99 dollár évente
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_12" value="2">
+		    <span></span>
+		</label>
+		ingyenes
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_12" value="3">
+		    <span></span>
+		</label>
+		ingyenes, de regisztrációt igényel
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_12" value="4" >
+		    <span></span>
+		</label>
+		10 dollár alkalmazásonként
+	    </h2>
+		    
+		     <header><h2>Milyen formátumú a packaged app fájl?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_13"  value="1"  required="">
+		    <span></span>
+		</label>
+		Open Web App formátumnak megfelelő fájlok ZIP fájlba csomagolva.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_13" value="2">
+		    <span></span>
+		</label>
+		Programkönyvtár Linux rendszereken, azaz .so fájl.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_13" value="3">
+		    <span></span>
+		</label>
+		 Egy fájl Multipurpose Internet Mail Extensions (MIME) multipart message formátummal.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_13" value="4">
+		    <span></span>
+		</label>
+		Az Androidról már ismerős APK fájlformátumú.
+	    </h2>
+		     
+		     
+		     <header><h2>Mi az a Rust?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_14" value="1" required="">
+		    <span></span>
+		</label>
+		Magyar borvidék a Fertő-tó partjánál.
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_14" value="2">
+		    <span></span>
+		</label>
+		Egy hatékony, biztonságos párhuzamos működésre tervezett nyelv.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_14" value="3">
+		    <span></span>
+		</label>
+		Elosztott, nagy megbízhatóságú fájlrendszer, orosz programozók munkája. Innen származik a neve is: RUssian STorage.
+	    </h2>
+		     
+		          <header><h2>Telepíthető-e más mobilplatformra, asztali gépre a Firefox OS-hez készült webapp?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_15" value="1" required="">
+		    <span></span>
+		</label>
+		Nem
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_15" value="2" >
+		    <span></span>
+		</label>
+		Csak Androidra és Windows Phone-ra
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_15" value="3" >
+		    <span></span>
+		</label>
+		Csak asztali gépre
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_15" value="4">
+		    <span></span>
+		</label>
+		Asztali gépre és Androidra is
+	    </h2>
+			  
+	<header><h2>Mikor kezdődött a Firefox OS fejlesztése?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_16" value="1" required="">
+		    <span></span>
+		</label>
+		2001
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_16" value="2" >
+		    <span></span>
+		</label>
+		2011
+
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_16" value="3" >
+		    <span></span>
+		</label>
+		2007
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_16" value="4">
+		    <span></span>
+		</label>
+		2012
+	    </h2>
+			  
+			  <header><h2>Az ASM.js forráskódjának nyelve...:</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_17" value="1" required="">
+		    <span></span>
+		</label>
+		Assembly
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_17" value="2">
+		    <span></span>
+		</label>
+		Java
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_17" value="3" >
+		    <span></span>
+		</label>
+		JavaScript
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_17" value="4">
+		    <span></span>
+		</label>
+		Rust
+	    </h2>
+			  
+	    <header><h2>Lehetséges-e olyan alkalmazás készítése a Firefox OS-hez, amely off-line módon is működni képes?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_18" value="1" required="">
+		    <span></span>
+		</label>
+		A telefon nem képes off-line módon működni, mert weboldalakat jelenít meg.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_18" value="2">
+		    <span></span>
+		</label>
+		A HTML5 AppCache mechanizmusa segítségével készíthetők ilyen alkalmazások.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_18" value="3">
+		    <span></span>
+		</label>
+		Amennyiben a szolgáltató hálózata támogatja, akkor igen, különben nem.
+	    </h2>
+	    
+	    <header><h2>Hogyan hívják a felület leképzéséért, megjelenítéséért és a WebAPI kezeléséért felelős réteget a Firefox OS-ben?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_19" value="1" required="">
+		    <span></span>
+		</label>
+		Gatto
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_19" value="2" >
+		    <span></span>
+		</label>
+		Gina
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_19" value="3">
+		    <span></span>
+		</label>
+		Gecko
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_19" value="4">
+		    <span></span>
+		</label>
+		Gaia
+	    </h2>
+	    
+	    <header><h2>Telepíthet-e a felhasználó Certified jogosultságú WebAppot telefonjára?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_20" value="1" required="">
+		    <span></span>
+		</label>
+		Nem, ilyet csak a firmware előállítója rakhat bele a telefonra telepítendő rendszekép-fájlba.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_20" value="2">
+		    <span></span>
+		</label>
+		Igen, de csak és kizárólag a Firefox Marketből.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_20" value="3" >
+		    <span></span>
+		</label>
+		Igen, bármilyen forrásból.
+	    </h2>
+	    
+	    <header><h2>Milyen telefonon érhető el a firefox os?</h2></header>
+	     <h2>
+		 
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="1">
+		    <span></span>
+		  </label>
+		Samsung
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="2">
+		    <span></span>
+		  </label>
+		Alcatel
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="3">
+		    <span></span>
+		  </label>
+		Nokia
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="4">
+		    <span></span>
+		  </label>
+		LG
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="5">
+		    <span></span>
+		  </label>
+		ZTE
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="6">
+		    <span></span>
+		  </label>
+		Huawei
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="7">
+		    <span></span>
+		  </label>
+		Sony
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="8">
+		    <span></span>
+		  </label>
+		HTC
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="9">
+		    <span></span>
+		  </label>
+		Geeksphone
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="10">
+		    <span></span>
+		  </label>
+		Motorola
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="11">
+		    <span></span>
+		  </label>
+		Lenovo
+		<br/>
+		<label class="pack-checkbox">
+		    <input type="checkbox" name="question_21[]" value="12">
+		    <span></span>
+		  </label>
+		Blackberry
+		<br/>
+	    </h2>
+	    <header><h2>Hogyan juthat hozzá egy alkalmazás a külső forrásból (Kamera, Galéria) származó képekhez Firefox OS alatt?</h2></header>
+	     <h2>
+		<label class="pack-radio">
+		    <input type="radio" name="question_22" value="1" required="">
+		    <span></span>
+		</label>
+		 Feliratkozva egy Web Activity-re, megadva a várt elem típusát.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_22" value="2" >
+		    <span></span>
+		</label>
+		A fájlrendszeren keresztül lehetséges a külső elem beolvasása.
+		<br/>
+		<label class="pack-radio">
+		    <input type="radio" name="question_22" value="3" >
+		    <span></span>
+		</label>
+		 A Kamera vagy a Galéria alkalmazás meghatározott DOM elemének másolásával.
+	    </h2>
+	    
+        <header><h2>Név</h2></header>
+            <p>
+		<input type="text" placeholder="Név" name="name" required>
+              <button type="reset">Clear</button>
+            </p>
+	<header><h2>E-mail</h2></header>
+            <p>
+		<input type="email" placeholder="E-mail" name="email" required>
+              <button type="reset">Clear</button>
+            </p>
+	    <header><h2>Szeretnék kérni e-mailben több információt, és hasznos linkeket arról, hogy miképpen vehetek részt a szabad szoftverek fejlesztésében, tesztelésében, dokumentálásában, népszerűsítésében.</h2></header>
+            <label class="pack-checkbox">
+		<input type="checkbox" checked name="survey_newsletter">
+  <span></span>
+</label>
+	    <header><h2>Honnan hallottál a szabad szoftverekről:</h2></header>
+            <p>
+		<textarea placeholder="" name="survey[opensource]"></textarea>
+            </p>
+	    
+	     <header><h2>Mióta használsz Firefoxot</h2></header>
+            <p>
+              <input type="text" placeholder="" name="survey[firefox_start]" >
+              <button type="reset">Clear</button>
+            </p>
+	    <header><h2>Mióta használsz Thunderbirdöt:</h2></header>
+            <p>
+              <input type="text" name="survey[thunderbird_start]" placeholder="" >
+              <button type="reset">Clear</button>
+            </p>
+	    
+	    <header><h2>Mióta használsz LibreOffice-ot:</h2></header>
+            <p>
+              <input type="text" name="survey[lo_start]" placeholder="" >
+              <button type="reset">Clear</button>
+            </p>
+	    
+	    <header><h2>Mi a véleményed a Firefoxról és a Firefox androidos verziójáról?</h2></header>
+	    <p>
+              <textarea name="survey[opinion_fx]" placeholder=""></textarea>
+            </p>
+	    <header><h2>Melyik Mozilla projektben vennél részt szívesen?</h2></header>
+	    <p>
+              <textarea placeholder="" name="survey[moz_projekt]"></textarea>
+            </p>
+	    <header><h2>Milyen Mozilla termékeket és szolgáltatásokat használsz?</h2></header>
+	    <p>
+              <textarea placeholder="" name="survey[moz_product]"></textarea>
+            </p>
+	    <header><h2>Honnan informálódsz a Mozillával kapcsolatos hírekről?</h2></header>
+	    <p>
+              <textarea placeholder="" name="survey[info]"></textarea>
+            </p>
+	    <p>
+		<button  type="submit" class="bb-button recommend">Kész</button><p>
+	</form>
+    </article>
+  </section>
+<script type="text/javascript" defer src="js/status.js"></script>
+<script type="text/javascript" defer src="js/seekbars.js"></script>
+<script type="text/javascript" defer src="js/app.js"></script>
+</body>
+</html>
