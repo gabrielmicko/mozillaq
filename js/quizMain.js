@@ -34,10 +34,12 @@ function getQuestions(selectedLanguage) {
     questionJSON = JSON.parse(questionJSON);
     afterDateLoad(questionJSON);
 
-    /*      var url = "http://94.177.247.68:8080/victor/pretto3Get";
-            var requestMessage = '{"language":"en"}'
-            var posting = $.post(url, requestMessage);
+    var hostname = $(location).attr('hostname');
+    var url = 'http://' + hostname + "/server/api.php";
+    var requestMessage = '{"language":"en"}';
 
+    /*
+        var posting = $.post(url, requestMessage);
         posting.done(function (data) {
             console.log(data);
             afterDateLoad(JSON.parse(data));
@@ -64,9 +66,7 @@ function populateQuestions(inArray) {
             questionElement.multiSelect = 1;
         }
 
-
         collections.quizQuestions.push(questionElement);
-        console.log(questionElement);
 
         if (inArray.quizQuestions.length - 1 == i) {
             notifier.resolve();
