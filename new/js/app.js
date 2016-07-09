@@ -2,7 +2,9 @@ var collections = {
     quizQuestions: []
 }
 
-$(document).on("pagechange", function (event) {});
+$(document).on("pagechange", function (event) {
+    console.log('beleptem');
+});
 
 $(document).ready(function () {
     getQuestions("en");
