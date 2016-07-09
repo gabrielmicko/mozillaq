@@ -1,6 +1,24 @@
-basic message structure for QuizQuestions
+###############
+##> Request <##
+###############
+
+#> Quiz Question request
 
 {
+  "messageName": "getQuiz", 
+  "language": "en", 
+  "quiztype": 1
+}
+
+
+################
+##> Response <##
+################
+
+#> Quiz Question response
+
+{
+  "messageName": "returnQuizQuestions", 
   "quizQuestions": [
     {
       "idQuestion": 1,
