@@ -21,9 +21,8 @@ You are ready to go.
 
 
 ===
+# Sprint for kicking-off this project
 
-Sprint for kicking-off this project
-===
 Phase 1:
 ---
 * Designing the application
@@ -32,25 +31,51 @@ Phase 1:
 
 __Designing the application:__
 
-Front-end will be a single page application which will follow
+Front-end will be a single page application which will follows
 [mozilla's guidlines](https://www.mozilla.org/en-US/styleguide/).
 At the quiz content we need design for the header, questions, answers and design for the result page.
+
 __Front-page wireframe:__
+
 ![](https://raw.githubusercontent.com/gabrielmicko/mozillaq/master/docs/front_page.png)
+
 __Menu:__
-The menu will slide-in from left once the menu button has been clicked.
-Design should include menu items and a submenu items for picking language.
+
+The menu will slide-in from left when the menu button has been clicked.
+Design will include menu items and a submenu items for picking language.
 
 ![](https://raw.githubusercontent.com/gabrielmicko/mozillaq/master/docs/front_page_menu.png)
 
+Deadline: 2016.07.20.
 
-
-
+---
+Front-end:
+* single page application
+* uses angular
+* doesn't have any back-end dependency except the quizes
+* communicates over json
+* multilanguage app
+* ios/android/desktop mobile-first support
 Deadline: 2016.07.30.
+--
+
+Back-end:
+* node || php || sqlite based backend
+* it needs to be easy to manage (read / write / export / import)
+* json endpoint for getting the quiz
+* json endpoint for saving / returning the result
+* multilanguage db format
+* table for results / questions / answers
+
+Deadline: 2016.07.25.
+
+
 ___
 Phase 2:
 ---
+
 * Creating enviroment for running the application
 * Testing the application
+* Writing quizes in english / hungarian and other foreign languages we support
 
 Deadline: 2016.08.05.
