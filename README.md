@@ -24,16 +24,16 @@ You are ready to go.
 # Sprint for kicking-off this project
 
 Phase 1:
----
+
 * Designing the application
 * Building the front-end for the application
 * Building the back-end for the application
 
 __Designing the application:__
 
-Front-end will be a single page application which will follows
+Front-end will be a single page application which will follow
 [mozilla's guidlines](https://www.mozilla.org/en-US/styleguide/).
-At the quiz content we need design for the header, questions, answers and design for the result page.
+At the quiz content we need design for the questions, answers and for the result page. We also need a shiny mozilla header.
 
 __Front-page wireframe:__
 
@@ -53,9 +53,10 @@ Front-end:
 * single page application
 * uses angular
 * doesn't have any back-end dependency except the quizes
-* communicates over json
+* communicates trough json based endpoints
 * multilanguage app
-* ios/android/desktop mobile-first support
+* ios/android and desktop support, should be mobile-first
+
 Deadline: 2016.07.30.
 --
 
@@ -70,12 +71,18 @@ Back-end:
 Deadline: 2016.07.25.
 
 
-___
+
 Phase 2:
 ---
 
-* Creating enviroment for running the application
+* Creating environment for running the application
 * Testing the application
 * Writing quizes in english / hungarian and other foreign languages we support
+
+Environment
+
+* linux based
+* ftp for file managing
+* node, mysql, phpmyadmin
 
 Deadline: 2016.08.05.
