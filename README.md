@@ -22,7 +22,6 @@ You are ready to go.
 
 ===
 
-
 # Sprint for kicking-off this project
 
 Phase 1:
@@ -51,6 +50,7 @@ Design will include menu items and a submenu items for picking language.
 Deadline: 2016.07.20.
 
 ---
+
 Front-end:
 * single page application
 * uses angular
