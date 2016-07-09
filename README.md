@@ -21,6 +21,8 @@ You are ready to go.
 
 
 ===
+
+
 # Sprint for kicking-off this project
 
 Phase 1:
@@ -58,6 +60,7 @@ Front-end:
 * ios/android and desktop support, should be mobile-first
 
 Deadline: 2016.07.30.
+
 --
 
 Back-end:
