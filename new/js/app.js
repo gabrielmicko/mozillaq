@@ -19,3 +19,19 @@ app.controller('quizAppController', ['$scope', function ($scope) {
     };
 
 }]);
+
+function pageChange(page) {
+    var location = "#"
+    if (page == 1) {
+        //language selected only
+        location += "quizPage?language=" + $('#select-language').val();
+    } else if (page == 2) {
+        location += "selectLanguage";
+    } else {
+        var parts = page.split('-');
+        location += "quizPage?quiztype=" + parts[1] + "&language=" + $.urlParam("language");
+        $("#quizMenuPanel").panel("close");
+    }
+
+    window.location.href = location;
+}
