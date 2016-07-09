@@ -9,7 +9,7 @@
 
     <!-- jQuery Mobile CSS library -->
     <link rel="stylesheet" href="css/jmobile.min.css" />
-
+    <link rel="stylesheet" href="css/quizMain.css" />
 
     <!-- JS libraries & scripts -->
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -26,9 +26,34 @@
 
     <script type="text/javascript" src="js/app.js"></script>
 
+
+    <div data-role="page" id="selectLanguage" data-title="Quiz Page">
+        <form>
+            <div class="centerDiv" align='center'>
+                <div class="ui-field-contain" style='text-align: center;'>
+                    <select name="select-language" id="select-language" data-iconpos="right">
+                        <option value="en">English</option>
+                        <option value="hu">Magyar</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                    <a onclick='pageChange("1");' class="ui-btn ui-btn-inline ui-corner-all">Quizz</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <div data-role="page" id="quizPage" data-title="Quiz Page">
+        <div data-role="panel" id="quizMenuPanel">
+            <ul data-role="listview" data-inset="true">
+                <li><a onclick='pageChange("1-1");'>Quiz 1</a></li>
+                <li><a onclick='pageChange("1-2");'>Quiz 2</a></li>
+                <li><a onclick='pageChange("1-3");'>Quiz 3</a></li>
+                <li><a onclick='pageChange("2");'>Language</a></li>
+            </ul>
+        </div>
         <div data-role="header" id="pageone-headaer">
-            <h2>Quiz Questions Header</h2>
+            <a href="#quizMenuPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Open Panel</a>
+            <h2>&nbsp;</h2>
         </div>
         <div data-role="main" class="ui-content">
             <div id="quizMainList">
