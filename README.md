@@ -21,10 +21,10 @@ You are ready to go.
 
 
 ===
-
 # Sprint for kicking-off this project
 
 Phase 1:
+---
 
 * Designing the application
 * Building the front-end for the application
