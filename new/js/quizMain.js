@@ -36,7 +36,7 @@ function getQuestions(selectedLanguage) {
 
     var hostname = $(location).attr('hostname');
     var url = 'http://' + hostname + "/server/api.php";
-    var requestMessage = '{"language":"en"}';
+    var requestMessage = '{"messageName":"getQuiz","quiztype":' + $.urlParam("quiztype") + ',"language":"' + $.urlParam("language") + '"}';
 
     /*
         var posting = $.post(url, requestMessage);
@@ -86,3 +86,12 @@ function visualizeQuestions() {
     $('[data-role="controlgroup"]').controlgroup().controlgroup("refresh");
 
 }
+
+$.urlParam = function (name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results == null) {
+        return null;
+    } else {
+        return results[1] || 0;
+    }
+};
