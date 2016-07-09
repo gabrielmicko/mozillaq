@@ -24,29 +24,7 @@
 
 <body ng-app="QuizApp" ng-controller='quizAppController'>
 
-    <script type="text/javascript">
-        var collections = {
-            quizQuestions: []
-        }
-
-        $(document).on("pagechange", function (event) {});
-
-        $(document).ready(function () {
-            getQuestions("en");
-        });
-
-        var app = angular.module('QuizApp', []);
-
-        app.controller('quizAppController', ['$scope', function ($scope) {
-            $scope.quizList = collections.quizQuestions;
-
-            $scope.updateQuizList = function () {
-                $scope.quizList = collections.quizQuestions;
-                $scope.$apply();
-            };
-
-        }]);
-    </script>
+    <script type="text/javascript" src="js/app.js"></script>
 
     <div data-role="page" id="quizPage" data-title="Quiz Page">
         <div data-role="header" id="pageone-headaer">
