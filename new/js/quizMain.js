@@ -5,7 +5,8 @@ function getQuestions() {
     var url = 'http://localhost/mozillaq-master/new/php/middleLayer.php';
     var requestMessage = '{"messageName":"getQuiz","quiztype":' + $.urlParam("quiztype") + ',"language":"' + $.urlParam("language") + '"}';
 
-    var posting = $.post(url, requestMessage);
+    var posting = $.post(url, requestMessage, null, "json");
+    //var posting = $.post(url, requestMessage);
     posting.done(function (data) {
         /*console.log(data);*/
         afterDateLoad(data);
