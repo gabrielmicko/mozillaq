@@ -1,0 +1,4 @@
+servername=localhost
+username=mozilla
+password=123456
+databasename=mozillaQuiz
