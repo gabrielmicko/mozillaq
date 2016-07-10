@@ -5,32 +5,39 @@
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-        $language = "en";
+        $messageRequest = json_decode(file_get_contents('php://input'), true);
 
-        $returnArray = getLanguageFilteredQuestions($language);
-        $responseArray = array();
+        if($messageRequest['messageName'] == "getQuiz"){
 
-        foreach($returnArray as $quizElement){
+            $language = $messageRequest['language'];
 
-            $tempArray=array(
-            'idQuestion'=> $quizElement['idQuestion'],
-            'textQuestion'=> $quizElement['textQuestion'],
-            'selectChoices' => getLanguageFilteredAnswers($language,$quizElement['idQuestion']),
-            'rightAnswers' => getIdFilteredRightAnswers($quizElement['idQuestion'])
-            );
+            $returnArray = getLanguageFilteredQuestions($language);
+            $responseArray = array();
 
-            array_push($responseArray,$tempArray);
-	    }
+            foreach($returnArray as $quizElement){
 
-        $json = array(  "messageName" => "returnQuizQuestions", "quizQuestions" => $responseArray);
+                $tempArray=array(
+                'idQuestion'=> $quizElement['idQuestion'],
+                'textQuestion'=> $quizElement['textQuestion'],
+                'selectChoices' => getLanguageFilteredAnswers($language,$quizElement['idQuestion']),
+                'rightAnswers' => getIdFilteredRightAnswers($quizElement['idQuestion'])
+                );
+
+                array_push($responseArray,$tempArray);
+            }
+
+            $messageResponse = array(  "messageName" => "returnQuizQuestions", "quizQuestions" => $responseArray);
+        }else{
+            $messageResponse = array("status" => 2, "msg" => $messageRequest['messageName']);
+        }
 
     }else{
-        $json = array("status" => 0, "msg" => "Request method not accepted only POST messages are accepted!");
+        $messageResponse = array("status" => 0, "msg" => "Request method not accepted only POST messages are accepted!");
     }
 
     /* Output header */
     header('Content-type: application/json');
-    echo json_encode($json);
+    echo json_encode($messageResponse);
 
     close_connection();
 
