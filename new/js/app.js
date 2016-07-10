@@ -3,11 +3,16 @@ var collections = {
 }
 
 $(document).on("pagechange", function (event) {
-    console.log('beleptem');
+
+    var loadedPage = $.mobile.pageContainer.pagecontainer("getActivePage");
+
+    if ((loadedPage.attr('id') == "quizPage") && ($.urlParam("language") != null) && ($.urlParam("quiztype") != null)) {
+        getQuestions();
+    }
 });
 
 $(document).ready(function () {
-    getQuestions("en");
+
 });
 
 var app = angular.module('QuizApp', []);

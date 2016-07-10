@@ -23,26 +23,26 @@
     {
       "idQuestion": 1,
       "rightAnswers": [
-        {"id": 1, "score": 1}
+        {"idChoice": 1, "score": 1}
       ],
       "selectChoices": [
-        {"id": 1, "text": "choice 1 - right"},
-        {"id": 2, "text": "choice 2"},
-        {"id": 3, "text": "choice 3"},
-        {"id": 4, "text": "choice 4"}],
+        {"idChoice": 1, "textChoice": "choice 1 - right"},
+        {"idChoice": 2, "textChoice": "choice 2"},
+        {"idChoice": 3, "textChoice": "choice 3"},
+        {"idChoice": 4, "textChoice": "choice 4"}],
       "textQuestion": "This is the first test Question"
     },
     {
       "idQuestion": 2,
       "rightAnswers": [
-        {"id": 3, "score": 1},
-        {"id": 4, "score": 12}
+        {"idChoice": 3, "score": 1},
+        {"idChoice": 4, "score": 12}
       ],
       "selectChoices": [
-        {"id": 1, "text": "choice 1"},
-        {"id": 2, "text": "choice 2"},
-        {"id": 3, "text": "choice 3 - right"},
-        {"id": 4, "text": "choice 4 - right"}],
+        {"idChoice": 1, "textChoice": "choice 1"},
+        {"idChoice": 2, "textChoice": "choice 2"},
+        {"idChoice": 3, "textChoice": "choice 3 - right"},
+        {"idChoice": 4, "textChoice": "choice 4 - right"}],
       "textQuestion": "This is the second test Question"
     }
   ]

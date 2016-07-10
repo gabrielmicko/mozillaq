@@ -57,27 +57,34 @@
         </div>
         <div data-role="main" class="ui-content">
             <div id="quizMainList">
-                <ul class="ui-listview ui-corner-all" data-role="listview" data-inset="true" ng-repeat='x in quizList' style="white-space: normal !important;">
-                    <li class="ui-li" data-theme="c" data-wrapperels="div" data-shadow="false" data-corners="false">
-                        <div class="ui-btn-inner ui-li">
-                            <div>
-                                <h2 class="ui-li-heading">{{x.textQuestion}}</h2>
-                                <br/>
-                                <fieldset data-role="controlgroup" id='controlgroup-radio-{{x.idQuestion}}' ng-hide='x.multiSelect'>
-                                    <div class='ui-corner-all' ng-repeat='y in x.selectChoices'>
-                                        <label for="radio-choice-{{x.idQuestion}}-{{y.id}}">{{y.text}}</label>
-                                        <input name="radio-controlgroup-{{x.idQuestion}}" id="radio-choice-{{x.idQuestion}}-{{y.id}}" value="{{x.idQuestion}}-{{y.id}}" type="radio">
-                                    </div>
-                                </fieldset>
-                                <fieldset data-role="controlgroup" id='controlgroup-checkbox-{{x.idQuestion}}' ng-show='x.multiSelect'>
-                                    <div class='ui-corner-all' ng-repeat='y in x.selectChoices'>
-                                        <label for="checkbox-choice-{{x.idQuestion}}-{{y.id}}">{{y.text}}</label>
-                                        <input name="checkbox-controlgroup-{{x.idQuestion}}" id="checkbox-choice-{{x.idQuestion}}-{{y.id}}" value="{{x.idQuestion}}-{{y.id}}" type="checkbox">
-                                    </div>
-                                </fieldset>
+                <ul class="ui-listview ui-corner-all" data-role="listview" data-inset="true" style="white-space: normal !important;" id="quizListView">
+                    <div ng-repeat='x in quizList'>
+                        <li class="ui-li" data-theme="c" data-wrapperels="div" data-shadow="false" data-corners="false">
+                            <div class="ui-btn-inner ui-li" style='padding-top:5px;padding-bottom:5px;'>
+                                <h2 class="ui-li-heading" style='padding-left:15px;padding-right: 15px;white-space: normal !important;'>{{x.textQuestion}}</h2>
+                                <div style='padding-right: 15px;padding-left:15px;white-space: normal !important;'>
+                                    <fieldset data-role="controlgroup" id='controlgroup-radio-{{x.idQuestion}}' ng-hide='x.multiSelect'>
+                                        <div class='ui-corner-all' ng-repeat='y in x.selectChoices'>
+                                            <label for="radio-choice-{{x.idQuestion}}-{{y.idChoice}}">{{y.textChoice}}</label>
+                                            <input name="radio-controlgroup-{{x.idQuestion}}" id="radio-choice-{{x.idQuestion}}-{{y.idChoice}}" value="{{x.idQuestion}}-{{y.idChoice}}" type="radio">
+                                        </div>
+                                    </fieldset>
+                                    <fieldset data-role="controlgroup" id='controlgroup-checkbox-{{x.idQuestion}}' ng-show='x.multiSelect'>
+                                        <div class='ui-corner-all' ng-repeat='y in x.selectChoices'>
+                                            <label for="checkbox-choice-{{x.idQuestion}}-{{y.idChoice}}">{{y.textChoice}}</label>
+                                            <input name="checkbox-controlgroup-{{x.idQuestion}}" id="checkbox-choice-{{x.idQuestion}}-{{y.idChoice}}" value="{{x.idQuestion}}-{{y.idChoice}}" type="checkbox">
+                                        </div>
+                                    </fieldset>
+                                </div>
                             </div>
-                        </div>
-                    </li>
+
+                            <div style='padding-right: 15px;padding-left:15px;white-space: normal !important;'>
+                                <div style='border-style: solid;border-top: #ff0000;' ng-hide='{{{true: 1, false: 0}[$last]}}'>
+                                </div>
+                            </div>
+
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
